@@ -1,0 +1,76 @@
+1.  summarize the question - write key points on the whiteboard
+2.  clarify, narrow the scope of what you are doing
+3.  Minimum Viable Product: simple quick solution first.
+4.  then expand on that solution with any more complex solution.
+
+	- don't explain simple things
+	- focus on explaining design decisions (rather than coding)
+	- draw a visual representation of what your design is doing [e.g. in a "toolbox" you put program elements in ... ]
+	- work collaboratively with the interviewer (they want to see you succeed);
+
+	**********TIPS************
+	bring your own thin tip markers
+	start to write code in the top left corner (to give yourself space)
+	PRACTICE writing code on a 
+	REVIEW witeboarding 101 W2D2
+
+
+	getPrice(discount) - 
+
+===== natural to gravitate toward what you are comfortable doing, rather than what is necessary.  e.g. in the example Reno started jumped into coding - before clarifying.  
+
+
+
+EXAMPLE:  STOREKEEPER, SELLS BAKED GOODS, WANTS SOMETHING THAT WILL TELL HIM WHEN TO SELL GOODS AT REDUCED PRICE:
+
+Q:  which days are you offering discounts?
+		Wednesday: coffee 20%
+		Thursday: coffee 30%
+		Sunday: donuts 50%
+
+Q: what do you sell:
+		coffee  $2
+		donuts 	$1.50
+		tea		$4
+
+whiteboard:
+
+	pseudocode:  I have an item, what does it cost
+				I have a bunch of items what do they cost
+
+				 each design program should be 
+				 use get(day) then pass result into get(price)
+				 
+				 user figures out what they want, progrma figures out what day it is, and what the price is.
+
+
+				  for each "product" 
+				* single item price 
+				* applicable discount
+				* number of items
+			
+
+		(list of objects)
+		var cart = {
+			coffee: 3,
+			donuts: 12,
+			function checkout(cart)
+		}
+
+		var listOfAllProducts = [coffee, tea, donuts];
+
+		function getPrice(item) {
+			Switch(item) {
+				case "coffee":
+					return $2.00
+				case "donuts":
+					return $1.50
+				case "tea":
+					return $4.00
+			}
+		}
+
+
+"can you think of a better way to desgn that?"
+"how would I ring up multiple items, e.g. 10 coffee's"
+

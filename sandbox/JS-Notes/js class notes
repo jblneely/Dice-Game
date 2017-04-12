@@ -1,0 +1,147 @@
+REPL "REPL"
+read 
+evaluate
+print
+loop
+
+DOM (on HTML)
+document
+object
+model 
+
+JS - keep the JS on the bottom ... for now
+
+var  - variable
++
+myName
+=
+"bowman neely" (you don't need quotes for numbers)
+;
+
+strings, numbers, ...
+
+
+1.  link html to JS
+
+ <script src="script.js"></script>
+
+make objects in js with properties (key 'name' vlaue, name, favoriteFood, zip) signified by "keys".
+
+you can add properties with the object name and new [var] key value
+
+run js in the browser inspect element console - 
+
+exponents:  console.log(Math.pow(3,2))  [three to the second power]
+
+console.log(Math.random() * 10)  -- generates a random number between 0 and 1.
+
+console.log(Math.floor(Math.random() * 10);
+
+floor - cuts of decimals
+ceil - rounds up.
+
+* 10  -- means up to 10 but not including.
+
+
+// Math.random() returns a number between 0 (inclusive) and 1 (exclusive) --- so it will never return a number greater than 9.
+
+
+
+to give a boolean querry to JS type:   var myVar "typof" = {};
+
+
+//4  
+
+function myFunction {
+	var a = 1;
+	return a'
+}
+
+or when you define a statement with a function - you do have to add a semi colon.
+
+var myFunction = function() {
+	var a = 1;
+	return a;
+
+
+	//write comments in your code - otherwise when you come back to it, you won't have any idea what you were doing//
+
+
+
+};
+
+
+
+
+
+
+var name = "bowman";
+var color = "blue";
+myRealSalary = "100";
+
+var greeting = "My name is " + name + ".  My faborite collor is " + ".";
+
+
+NEW STYLE:  String interpretation.
+
+var greeting2 = 'My name is ${name}.  My faborite color is ${color}.''
+I make about ${realSalary + 1000000}
+
+
+
+using good variable names is key
+
+
+
+4/7/17:::::::::::::::::::::::::::::::::::::::::::::::::::::EVENT HANDLERS
+phone call is synchronous
+email is asynchronous.
+
+asynchronous code is delayed - only runs on event 
+
+what does "this" mean in the context of an event listener...
+
+
+hamburger  - with a pull out aside triggered on a transition...
+
+RESPONSIVE STATES:
+
+click 
+submit
+hover
+blur
+scroll
+key
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

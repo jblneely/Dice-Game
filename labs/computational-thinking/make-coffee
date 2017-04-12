@@ -1,0 +1,11 @@
+make a cup of coffee
+
+put water and coffee in the coffee maker and turn it on
+
+make sure the coffee maker is empty;
+if it isn't then -- empty the basket and any coffee in the beaker
+if it is then, take the beaker to the sink and fill it with  N number of cups of water
+return to the coffee maker and fill the resevoir with water;
+get the coffee grounds out of the freezer;
+fill the coffee filter cone with N+1 scoops of coffee;
+close the lid and turn on the machine;

@@ -1,0 +1,16 @@
+Debugging Notes
+
+stacktrace. debug, breakpoint, step through, 
+call stack (onthe right side) variables, 
+
+JS has only 9 errors.
+
+limit results to one site:
+
+site:url   ... e.g.:
+
+site:stackoverflow.com
+
+-url 	will limit that url in results
+
+-stackoverflow.com

@@ -1,0 +1,29 @@
+function isDivisibleBy5(i) {
+  return i % 5 === 0;
+}
+
+function isDivisibleBy3(i) {
+  return i % 3 === 0;
+}
+  
+  for (var i = 0; i<= 100; i++) {
+    if (isDivisibleBy5(i) && isDivisibleBy5(i)) {
+      console.log("fizzbuzz");
+    }
+      else if (isDivisibleBy3(i)) {
+        console.log("fizz");
+      }
+      else if (isDivisibleBy5(i)) {
+        console.log("buzz")
+      }
+      else {
+        console.log(i);
+      }
+   }
+
+
+
+
+   // dont use the string fizzbuzz anywhere in your code:
+
+   

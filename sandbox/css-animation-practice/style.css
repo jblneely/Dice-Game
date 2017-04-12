@@ -1,0 +1,63 @@
+#my-div {
+    border: 2px solid plack;
+    width: 100px;
+    height: 100px transorm: rotate(45deg) scale(2, 0.5) translate (100px, 100px);
+    transition: background-color, height, 2s ease-in-out;
+    /*you can use any property in place of "all" for example: background-color, height, border, etc.*/
+}
+
+#my-div:hover {
+    background-color: red;
+    border: 10px solid black;
+    height: 200;
+}
+
+body {
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+div {
+    border: ;
+    outline: ;
+    background color: ;
+    padding: ;
+}
+
+div:hover img {
+    transform: rotate(720deg);
+    ________________________________ .bounce {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 5px ridge orange;
+        animation-name: bouncy-square;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    /*.bunce:hover {
+	animation-name: bouncy-square;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}*/
+    @keyframes bouncy-square {
+        0% {
+            transform: translateY(0px);
+        }
+        20% {
+            transform: translateY(500px);
+        }
+        30% {
+            transform: translateY(400px);
+        }
+        50% {
+            transform: translateY(100px);
+            background-color: yellow;
+        }
+        100% {
+            transform: trsanlateY(500px);
+        }
+    }
+}

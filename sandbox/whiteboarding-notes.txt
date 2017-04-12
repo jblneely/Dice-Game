@@ -1,0 +1,24 @@
+whiteboarding for interviews:
+
+practice writing on a whiteboard - legible writing - straight lines; practice talking while writing)
+
+keep talking as you walk through the problem.
+ask questions: start with is the question in "ascii" - [look this up]
+"may I assume ..." (if there is no most common letter, the letter that comes last in the alphabet)
+give examples of what your code should do before you start writing code;
+do medium and high pseudocode
+use an array of 3 or 4 numbers (0,1,2,3), or words that are short (dog, beer)
+
+[check "code wars" for whiteboard challenges]
+
+1.  write a function to determine the most common letter.
+
+	- grab the word to be parsed
+	- go through each letter 
+	-store +1 for each occurance;
+	-compare the # of occurances for each letter;
+
+		-if there is a greater occurance - return the letter;
+	
+		-if there is not a greater- compare the letter to alphanumeric key
+		-return highest numeric value and equivalent letter.

@@ -1,0 +1,245 @@
+ARRAY syntax: []  $
+	*syntax note:  use either ' or " but be consistent.  Use double quotes if you have content that has an apostrophe.
+
+arrays are good for keeping things in a list.
+
+e.g. colors:
+
+var colors = ["blue", "green", "yellow"];
+console.log(colors);
+console.log(colors[0]); 							this returns "blue"
+
+//here is an index that is an offset for colors//
+
+colors = $100
+colors[0] = 1
+colors[1] = 2
+colors[2] = 3
+colors[3] = 4
+
+colors[i] ----> $100 + 1 
+
+
+
+
+
+var colors = ["blue", "green", "yellow"];
+console.log(colors);
+console.log(colors[0]);
+console.log(colors[1]);
+console.log(colors[2]);
+console.log(colors[3]);
+
+PROPERTY:
+
+console.log(colors.length);			--------> this will list colors, and show the number of colors in the array
+
+FUNCTION:
+
+colors.push("forange");		--------> this will add a color to the list.
+
+ASSIGN:
+
+colors[3] = "orange"		---------> will reassign (not assign) a new element name.
+
+
+MOVIES:
+
+var movies = ["Wolverine", "Dr.Strange", "XMen"];
+console.log(movies);
+console.log(movies[0]);
+console.log(movies[1]);
+console.log(movies[2]);
+
+
+console.log(movies.length);
+
+BOOKS:
+
+var books = ["count of monte cristo", "Peter Rabbit", "wine for dummies"];
+var lastBook = books[books.length -1];
+console.log(lastBook);									------> "wine for dummies"
+
+** here you are printing out only the lastBook...
+
+
+POP FUNCTION............................takes items off a list:  (e.g.)
+	pop takes the last item.
+	shift takes the first item.  pop is the most efficient because shift has to shift all the remaining elements in the array
+
+var books = ["count of monte cristo", "shogun", "wine for dummies"];
+var lastBook = books[books.length - 1];
+console.log(lastBook);
+
+var bookIDontLikeAnymore = books.pop();
+console.log(books.pop);
+console.log(books);
+
+REVERSE:.........................returns an array in reverse in the same place.  
+
+var numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
+numbers.reverse();
+console.log(numbers); 				-------> this returnes 5, 4, 3, 2, 1
+
+JOIN ......................................
+
+This can be useful to record cc#s and ss#s or other numbers that would require a -.
+
+var numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
+console.log("reverse() --------");
+
+console.log(`${numbers[0]} | ${numbers[1]} |${numbers[2]} |${numbers[3]} |${numbers[4]} |${numbers[5]}`);
+console.log(numberFormatted);
+console.log(typeof(numberFormatted));
+
+TYPES OF ARRAYS: check:::::::::
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
+
+
+
+
+LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS LOOPS 
+
+
+----------------------------------FOR LOOP --------------------------------
+
+for loop is more common than while loop:
+
+
+A "FOR LOOP" is made up of three expressions.
+		for (<initializer>; <condition>; <step>) {}
+
+	1.  initializer
+			i = 0
+	
+	2.  initial condition
+			i > coolPeople.length
+	
+	3.  step (increment)
+			i++
+
+Loop an index into an array.
+Looping conditionals.
+
+var coolPeople = ["Alaina Buzas","Celina Gutierrez","Maria-Christina Sevilla", "Jade Hartman","Mark Goldstein","Sara Kevorkian","Steven Keiser","Tim Muangkeo","peter amadon","Bowman Neely","Joanna Colson","Andrew Tsujimoto","Emmeline Aquino","Shawn Adams"];
+console.log(coolPeople);
+
+for (var i = 0; i <= 14; i++) {
+  console.log<'Hello ${coolPeople[i]}! whazzup.');
+}
+
+var coolPeople = ["Alaina Buzas","Celina Gutierrez","Maria-Christina Sevilla", "Jade Hartman","Mark Goldstein","Sara Kevorkian","Steven Keiser","Tim Muangkeo","peter amadon","Bowman Neely","Joanna Colson","Andrew Tsujimoto","Emmeline Aquino","Shawn Adams"];
+console.log(coolPeople);
+
+
+front to back:
+
+
+for (var i = 0; coolPeople.length; i++) {
+  console.log<'Hello ${coolPeople[i]}! whazzup.');
+}
+
+back to front:
+
+for (var i = coolPeople.length -1; i--) {
+  console.log<'Hello ${coolPeople[i]}! whazzup.');
+}
+
+
+THIS WOULD ONLY SAY HI TO HALF:
+for (var i = 0; coolPeople.length / 2; i++) {
+
+THIS WOULD SKIP EVERY OTHER PERSON:
+
+
+
+----------------------------------WHILE LOOP----------------------------
+
+1) react to user input until condition is met
+
+
+while(<condition>) {
+	// code.
+}
+
+e.g.
+
+var 1 = 0
+while (i < 10) {
+console.log("i is less than 10.);
+i + 1;
+}
+
+var question = "What is the answer to the universe";
+var anser = "42";
+var userInput = "";
+
+while (userInput != answer) {
+  userInput + prompt(question);
+}
+
+
+2)  a program that runs forever
+
+while (true)
+ ..wait for a request (going to www.googgle.com)
+ ..process that request
+ ..respond to that request
+
+ ..repeat forever...
+
+ ANOTHER WAY TO ITERATE OVER AN ARAY::::::::::::::::::::::::::::
+
+ "forEach"
+
+ console.log("...........forEach........");
+
+ var animalHouse = ["dog", "cat", "hen"];
+
+ for (var i = 0; i < animalHouse.length; i++) {
+ console.log('I want a ${animalHouse[i]}');
+ }
+
+You can use this function run another function over an array:
+
+var animalHouse = ["dog", "cat", "hen"];
+
+ for (var i = 0; i < animalHouse.length; i++) {
+ console.log('I want a ${animalHouse[i]}');
+ }
+
+animalHouse.forEach(myFunction);
+
+var myFunction = function(currentValue, index, array) {
+  console.log('I want a ${currentValue}');
+};
+
+
+var goalsInLife = ["Money", "eating", "sleep"];
+goalsInLife.forEach(iWantAllTheseThings);
+  --> need to define iWantAllTheseThings <--
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

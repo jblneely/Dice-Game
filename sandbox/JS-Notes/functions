@@ -1,0 +1,104 @@
+FUNCTIONS are machines:
+name your function what it does
+e.g. "multipyByTwo"
+reuse & document your code;  (it should be easy to tell what the code is doing just by glancing at it)
+decompose and problemsolve and pattern recognition;
+
+
+two ways to create a function:
+
+function sayHello() {
+	console.log("Hello.");				-----> connor prefers this style
+}
+
+
+var sayGoodbye = function () {
+	console.log("goodbye");
+}
+
+sayHello();
+sayGoodbye();
+console.log(typeof(sayHello));
+console.log(typeof(sayGoodbye));
+
+decompose a large function;
+then nest functions;
+
+function catTalk() {
+  console.log("Meow");
+}												----> "meow"
+
+
+area of a rectangle:
+
+var height = 10
+var width = 20
+
+function area () {
+  return width * height
+}
+
+alternative:  AREA 2
+
+function area2(width, height) {
+  return width * height;
+}
+
+console.log(area2(20, 10));
+
+RETURN FROM YOUR FUNCTION =======================================================
+
+function max(array) {
+	if (array.length == 0) {
+	return;										---> early return
+	}
+}
+
+var maxSoFar = array[0];
+	for (var i = 1; i<array.length; i++)
+		if (array[i]>maxSoFar) {
+		maxSoFar= array [i];
+		}
+		}
+		return maxSoFar;
+		}
+
+
+return keyword - gets the result.
+
+consol.log isn't appropriate to do that.
+
+DONT BOTHER WITH THE HOISTING SECTION OF THE MATERIALS...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+Conditions: evaluate to "true/false"
+<
+>
+==
+<=
+>=
+
+= 	assigns a value to a variable
+== 	compares for equality
+!= 	compares for "not equal"
+== 	two doesn't force a string and integer to consolidate to one or the other and then compare
+== 	three forces a string and integer to consolidate to one or the other and then compare
+
+'' 	encloses a 'string'.  Strings are inherently 'truthy'.  
+
+
+&& combines two values to evaluate
+|| means "or" it only needs one true to return true
+	false || true = true
+	false && true = false
+
+
+if (x) then (y) else (z)
+
+if (this-is-false) {
+	console.log(then-this)
+}
+
+{ -then
+
+check out JS "TRUTH TABLE"
+
+0 === '0'
+//0 is an integer
+//false is a boolean
+
+IF ELSE STATEMENT:
+
+var age = 19;
+
+if (age >= 21) {
+  console.log('come on in');
+} else {
+  console.log('try the icecream shop nextdoor');
+}
+
+
+IF - ELSE IF - ELSE ......................................................
+
+var age = 15;
+
+if (age >= 90) {
+  console.log('go home');
+} else if (age >= 21) {
+  console.log('come in');
+} else {
+  console.log('have an icecream');
+}
+
+
+
+
+DAY ......................................................
+var dayNumber = 3;
+
+if(dayNumber === 0){
+  day = 'Sunday';
+} else if(dayNumber === 1) {
+  day = 'Monday';
+} else if(dayNumber === 2) {
+  day = 'Tuesday';
+} else if(dayNumber === 3) {
+  day = 'Wednesday';
+} else if(dayNumber === 4) {
+  day = 'Thursday';
+} else if(dayNumber === 5) {
+  day = 'Friday';
+} else if(dayNumber === 6) {
+  day = 'Saturday';
+} else {
+  day = null;
+}
+
+console.log(day);
+
+
+SWITCH STATEMENT .............................................
+switch (condition) these take the place of else if statements.  mapping from a number to a string.  Here we are making a value a number.  Good for looking for only one type of information.
+
+scaffold:
+var dayNumber = 5
+
+var day;
+
+switch (dayNumber) {
+  case 0:
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  default:
+}
+
+console.log(day)
+
+
+
+filled in:
+
+switch (dayNumber) {
+  case 0:
+    day = 'Sunday';
+  case 1:
+    day = 'Monday';
+  case 2:
+    day = 'Tuesday';
+  case 3:
+    day = 'Wednesday';
+  case 4:
+    day = 'Thursday';
+    console.log('0');
+  case 5:
+    day = 'Friday';
+    console.log('1');
+  case 6:
+    day = 'Saturday';
+    console.log('2');
+  default:
+    day = 'Not a valid day of the week'
+}
+
+console.log(day)
+
+switch runs past 5 - and returns 'not a valid day of the week'
+insert a:
+
+"break" -- always insert breaks in a switch code.  
+
+var dayNumber = 
+
+var day;
+
+switch (dayNumber) {
+  case 0:
+    day = 'Sunday';
+    break;
+  case 1:
+    day = 'Monday';
+    break;
+  case 2:
+    day = 'Tuesday';
+    break;
+  case 3:
+    day = 'Wednesday';
+    break;
+  case 4:
+    day = 'Thursday';
+    break;
+    console.log('0');
+  case 5:
+    day = 'Friday';
+    console.log('1');
+    break;
+  case 6:
+    day = 'Saturday';
+    console.log('2');
+    break;
+  default:
+    day = 'Not a valid day of the week'
+}
+
+console.log(day)
+
+TERNARY STATEMENTS .................................................................
+//var car;
+//if (true) {
+//  car = 'saturn';
+//} else {
+//  car = 'jeep';
+//}
+//console.log(car);
+
+//we can write this code in fewer lines of code//
+
+var car = true ? 'saturn' : 'jeep';
+			     (if true) : (if false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

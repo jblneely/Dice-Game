@@ -1,0 +1,204 @@
+
+
+
+function name() {
+
+}
+name()
+
+
+
+
+
+crowdSourcedObject:
+
+var objectName = {
+	
+	key: value   -->property
+	function	-->function
+};
+
+ to retrieve: 
+
+console.log(crowdSourcedObject.location);         -->
+console.log(crowDourcedObject['location]']);   *** all the keys are stored as a sting and must be called with quotes ("")  Using a number gets "coerced" changed into a string.  Values can be anything(e.g. another object, boolean, )
+
+
+// given a word, return the most common letter in that word.
+
+//"loose" -> "0"; "blood" -> "0"
+
+// loop through each character in the array
+add 1 to that character's occurencer counter
+
+var count_a = 0
+var count_b = 0
+
+function mostCommonLetter(word) {
+	for (var i + 0; i < word.length; i++) {
+	var letter = word[i];
+
+	if (counter[letter] == undefined) {
+	counter[letter] = 0
+	}
+
+	counter[letter] += 1;
+	console.log(word[i)}
+}
+
+NEW SYNTAX FOR A "FOR ...in LOOP"   ----------- this loops through all the properties in an object.
+
+console.log("___________ print properties using for ...in loop")
+for (var propertyName in crowdSourcedObject) {
+	console.log(propertyName + " = " + crowdsourcedObject[propertyName]);
+}
+console.log("___________");
+
+
+
+
+
+
+
+
+
+
+
+
+function mostCommonLetter(word) {
+  var counter {};
+  
+  for (var i = 0; i < world.length; i++) {
+    var letter = word[i];
+    
+    if <counter[letter] == undefined {
+      counter[letter] = 0;
+    }
+    counter[letter] += 1;
+  }
+  console.log(counter);
+  for (var letter in counter) {
+    console.log(letter);
+  }
+  }
+}
+console.log(counter);
+
+var maxLetter:
+var frequencyMaxLetter = 0;
+
+for (var letter in counter) {   
+	console.log("Letter is " + letter);
+	console.log("value is " + counter[letter])
+  var occurencesForThisLetter = counter[letter];
+
+  if (occuranceForThisLetter > frequencyMaxLetter) {
+  frequencyMaxLetter = occurencesForThisLetter;
+  maxLetter = Letter;
+  }
+}
+
+STORE NUMBERS YOU DON'T NEED TO COMPUTE AS STRINGS TO SAVE CPU SPACE ALLOCATED TO NUMBERS
+
+driverLicense {
+  address: "....",
+  eyeColor: "....",
+  birthday: ".....",
+  dlNumber: "123"
+},
+  creditCard: "123321123"  --> why store this as a string?  because computers have only a certain number of 
+
+-------------------------DELETE----------
+delete crowDourcedObject.__________; (for strings i.e. properties)
+
+ -or-
+
+ delete crowdsourcedObject["_________"] (for string)
+
+ crowDourcedObject[_________] (for variable)
+
+
+
+4/6/17
+**************************** OOP ********************** object oriented programing
+
+CLASSES ==> INSTANCES  [classes are the new version of prototypes]
+
+class Product {
+  constructior() { //constructor
+    console.log("hello"); //called
+  }
+}
+var thisIsAnInstanceOfProduct = new Product();  //instance (of an object in a class - the class, in this case "Product" must have a capitalized first letter to indicate it is an object class)
+console.log(thisIsAnInstanceOfProduct); //class
+
+
+var thisIsAnInstanceOfProduct1 = new product ("");
+var thisIsAnInstanceOfProduct2 = new Product("");
+
+CONSTRUCTOR
+
+
+
+class Product {
+  constructor(name, price, inventory) {
+    this.name = name;
+    this.price = price;
+    this.inventory = inventory;
+    console.log("hello"); //called
+  }
+}
+
+var coffee = new Product("wonderful coffee", 2.00, 1000);
+var donuts = new Product("cheaper by the dozen", 1.50, 100000);
+var tea = new Product("cheaper by the dozen", 4.00, 1000);
+var wifi = new Product("cheaper by the dozen", 0, infinity);
+}
+ console.log(products);
+
+
+to add a new product to the object class, just add another var
+-----------------------------------------
+
+class Superheros {
+  constructor(realName, powers) {
+    this.realName = realName;
+    this.power = powers;
+  }
+}
+
+ var superman = new Superheros("Clark Kent", ["flight", "Strength", "Time Travel"]);
+ var batman = new Superheros("Bruce Wayne", ["Money", "Emotional Trauma", "Prep Time"]);
+ var spidy = new Superheros("Peter Parker", ["Wit", "Sticky Webs", "Photojournalism"]);
+ 
+ var superheros = [superman, batman, spidy];
+ 
+ console.log(superheros);
+
+
+
+RESEARCH SPECIFICITY RULES:
+
+!important    ==> disregards specificity rules, where you want to override.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.l

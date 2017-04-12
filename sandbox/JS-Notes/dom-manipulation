@@ -1,0 +1,172 @@
+Keep your html scripts at the end _event listener >> you don't want it to run before the event is defined.
+
+
+<title>
+<link>
+<script src="index.js"></script>
+
+<body>
+<ul id="checkout">
+	<li id="primary">
+	<li id="myLatte" class="coffee" data-price="3.75">Latte</li>
+	<li id="myMocha" class="coffee" data-price="4.50">Mocha</li>
+	<li id="myAmericano" class="coffee" data-price="2.50">Americano</li>
+<ul>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	var cuppa = document.getElementById('myLatte');
+	console.log(cuppa);
+}
+
+LOOK UP ADD EVENT LITENER...
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });
+</script>
+
+
+HTML == GET ELEMENT BY ID/ CLASSNAME ('coffee')[1]
+		GET ELEMENTS BY TAG NAME ('p' 'div' 'section' etc.)
+
+CSS == QUERY SELECTOR .CLASS #ID (first instance)
+				selectorAll - all instances
+
+
+*************************changing elemnets using JS DOM *********************
+
+document.addEventListener("DOMContenetLoaded", function () {
+var expensive = document.getElementById('Mocha') {
+expensive.innerText;	
+expensive.getAttribute("data-price"));
+expensive.getAttribute("data-price", '8.20'));
+}
+}
+
+
+attributes:
+
+data-...
+
+data-price
+data-size.
+
+
+CREATING A NEW ELEMENT:---------------------appendChild
+
+
+__ID__
+
+document.addEventListener("DOMContenetLoaded", function () {
+var newCup = docuemnt.createElement('li');
+newCup.innerText = 'Machiatto';
+document.body.appendChild(newCup);
+
+
+var newCup = docuemnt.createElement('li');
+newCup.innerText = 'Machiatto';
+newCup.id = 'myMacchiatto';
+document.getElementById('primary').appendChild(newCup)  //this will create a new element within UL ID checkout)
+
+__CLASS__ -------------------
+newCup.classList.add('')
+newCup.class.remove('')
+
+
+checkoutBtn.className = "New Class Name"
+
+you can use this to make a button that greys out on a certain condition
+
+document.addEventListener("DOMContenetLoaded", function () {
+var checkoutBtn - document.createElement(div');
+checkoutBtn.innertext = 'Checkout Cart''
+checkoutBtn.classList.add(button', 'disabled')'
+document.body.appendChild(checkoutBtn);
+
+New data- --
+checkoutBtn.setAttribute('data-clicks', '0')
+
+checkoutBtn.classList.remove('disabled');
+
+
+creates HTML:
+.button {
+	width:
+	color:
+	background-color: blue;
+	padding:
+}
+.disabled {
+	background-color: grey;
+}
+
+
+
+
+
+
+docuement.body //shortcut to document.getElementById('primary'), or document.getElementsByTagName('body')
+
+	
+}
+
+
+Inventory			shopping 			when someone clicks beans add a new <li> to the <ul>
+					<ul>
+						<li>
+
+<div id="checkout" class="button" data-clicks=""
+
+
+********************************************************
+EVENT LISTENERS -- HOW TO MAKE BUTTONS DO THINGS WHEN THEY ARE CLICKED...'hover', 'keydown' etc.
+
+checkoutBtn.addEventListener('click', fucntion() {
+	console.log('clicked!')
+}
+
+checkoutBtn.addEventListener('click', fucntion() {
+var dataClicks = checkoutBtn.getAttribute('data-clics")
+   //console.log(data-clicks)
+checkoutBtn.SetAttribute('data-clicks', parseInt(dataClicks) += 1);   
+	//parseInt changes string to integer - necessary becuase//
+dataClicks = parrseInt(dataclicks) + 1;
+
+
+
+
+
+
+checkoutBtn.addEventListener('click', fucntion() {
+checkoutBtn.addEventListener('click', fucntion() {
+
+
+
+
+****************************** random>>>
+
+
+if (math.random)() > .5).........
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

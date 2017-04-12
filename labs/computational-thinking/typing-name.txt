@@ -1,0 +1,13 @@
+H: type my name on the keyboard;
+M: Open the computer;
+	turn it on;
+	type the letters of my namein the computer;
+L: Open the computer;
+	turn it on;
+	wait for it to initialize;
+	unlock the password;
+	open a word processing program;
+	type the letters of my name in the correct order;
+
+
+	

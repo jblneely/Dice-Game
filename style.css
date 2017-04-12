@@ -1,0 +1,183 @@
+body {
+    padding-left: 20px;
+    height: 400px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    /*        flex-wrap: wrap;
+*/
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+article {
+    width: 50%;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+aside {
+    width: 30%;
+    margin-right: : 10%;
+    padding: 10px;
+}
+
+h1 {
+    font-family: raleway, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background: "images/blog_header_bg.jpg" no-repeat max-width;
+    display: inline-block;
+}
+
+h2 {
+    font-family: raleway, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+}
+
+h3 {
+    font-family: raleway, sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+    font-size: small;
+}
+
+a {
+    font-family: Lato;
+    font-weight: 400;
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    border-color: white;
+}
+
+img {
+    width: 80%;
+    align-content: center;
+}
+
+p {
+    font-family: lato;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 16px;
+    text-align: left;
+}
+
+footer {
+    font-family: raleway (600);
+    padding-top-bottom: 30px, padding-right-left: 20px;
+    background: lightblue;
+}
+
+.navbar {
+    position: fixed;
+    display: inline-block;
+    background: white;
+    /*opacity: 0.8;*/
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding-top-bottom: 30px, /* padding-right-left: 300px;*/
+}
+
+textarea {
+    box-sizing: border-box;
+    padding-left-right: 20px;
+}
+
+
+}
+.button {
+    background: lightblue;
+    border-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+.button a {
+    color: white;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#backgroundimage {
+    width: 100%;
+    padding-top: 50px;
+}
+#navtabs {
+    padding-left-right: 50px;
+}
+#form-field {
+    padding: 20px 60px 20px 60px;
+    text-align: center;
+    line-height: 20px;
+}
+#copyright {
+    text-align: center;
+    margin-left: auto;
+}
+.row {
+    /* Let's add a border so we can see our rows better */
+    
+    border: 1px solid #000;
+}
+.column {
+    /* Let's add another border so we can see our columns better */
+    
+    float: center;
+    border: 1px solid #000;
+    display: inline-block;
+}
+.column-1 {
+    width: 8.33%;
+}
+.column-2 {
+    width: 16.66%;
+}
+.column-3 {
+    width: 25%;
+}
+.column-4 {
+    width: 33.33%;
+}
+.column-5 {
+    width: 41.66%;
+    display: inline-block;
+}
+.column-6 {
+    width: 50%;
+}
+.column-7 {
+    width: 58.33%;
+}
+.column-8 {
+    width: 66.66%;
+}
+.column-9 {
+    width: 75%;
+}
+.column-10 {
+    width: 83.33%;
+}
+.column-11 {
+    width: 91.66%;
+}
+.column-12 {
+    width: 100%;
+}
