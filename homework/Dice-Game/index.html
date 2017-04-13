@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <h1>FIVE <br> DICE</h1>
     <div id="player1">
         <div id="die1" class="dice">0</div>
         <div id="die2" class="dice">0</div>
@@ -19,7 +20,7 @@
         <div id="die4" class="dice">0</div>
         <div id="die5" class="dice">0</div>
         <button id="playerOneRollButton">Roll Dice</button>
-        <h2 id="status" style="clear:left;"></h2>
+        <h2 id="player1Sum" style="clear:left;"></h2>
     </div>
     <div id="player2">
         <div id="die6" class="dice">0</div>
@@ -28,8 +29,10 @@
         <div id="die9" class="dice">0</div>
         <div id="die10" class="dice">0</div>
         <button id="playerTwoRollButton">Roll Dice</button>
-        <h2 id="status" style="clear:left;"></h2>
+        <h2 id="player2Sum" style="clear:left;"></h2>
     </div>
+    <h1 id=winnerMessage></h1>
+    <button id="resetButton">PLAY AGAIN</button>
     <script src="js/main.js"></script>
 </body>
 

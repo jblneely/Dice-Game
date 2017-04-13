@@ -1,7 +1,7 @@
 function onPageLoad() {
-    $("#playerOneRollButton").on("click", playerOneRollDice);
+    $("#playerOneRollButton").on("click", playerOneRollDice); //change to key up
     console.log("player one button clicked");
-    $("#playerTwoRollButton").on("click", playerTwoRollDice);
+    $("#playerTwoRollButton").on("click", playerTwoRollDice).hide(); //change to key up
     console.log("player two button clicked");
 
 }
@@ -10,6 +10,12 @@ $(onPageLoad);
 function getRandomNumberUpTo(max) {
     return Math.floor(Math.random() * 6) + 1;
 }
+
+var p1Sum;
+var p2Sum;
+
+var p1Array;
+var p2Array;
 
 
 function playerOneRollDice() {
@@ -23,14 +29,21 @@ function playerOneRollDice() {
     var d3 = getRandomNumberUpTo(6);
     var d4 = getRandomNumberUpTo(6);
     var d5 = getRandomNumberUpTo(6);
-    var p1Sum = d1 + d2 + d3 + d4 + d5;
-    $("#player1sum").text("You rolled " + p1Sum + ".");
+    p1Sum = d1 + d2 + d3 + d4 + d5;
+    p1Array = [d1, d2, d3, d4, d5];
     die1.innerText = d1;
     die2.innerText = d2;
     die3.innerText = d3;
     die4.innerText = d4;
     die5.innerText = d5;
-    //return "You rolled " + p1Sum + ".";
+    $("#player1Sum").html("You rolled " + p1Sum + ".");
+    $("#playerTwoRollButton").show();
+    $("#playerOneRollButton").hide();
+
+
+    // var player1Dice = ["d1", "d2", "d3", "d4", "d5"]
+
+    // $()
 }
 
 function playerTwoRollDice() {
@@ -44,25 +57,34 @@ function playerTwoRollDice() {
     var d8 = getRandomNumberUpTo(6);
     var d9 = getRandomNumberUpTo(6);
     var d10 = getRandomNumberUpTo(6);
-    var p2Sum = d6 + d7 + d8 + d9 + d10;
-    // $("#player2Sum").text("p2Sum")
+    p2Sum = d6 + d7 + d8 + d9 + d10;
+    p2Array = [d6, d7, d8, d9, d10];
     die6.innerText = d6;
     die7.innerText = d7;
     die8.innerText = d8;
     die9.innerText = d9;
     die10.innerText = d10;
-    return "You rolled " + p2Sum + ".";
+    $("#player2Sum").html("You rolled " + p2Sum + ".");
+    $("#playerTwoRollButton").hide();
+    compareSums();
 }
-console.log('hola');
 
-// var compareSums = function(p1Sum, p2Sum) {
-//     if (p1Sum > p2Sum) {
-//         console.log("Player two buys lunch!");
-//     } else {
-//         console.log("Player one buys lunch");
-//     }
+var compareSums = function() {
+    if (p1Sum > p2Sum) {
+        $("#winnerMessage").text("Player two wins!");
+    } else if (p1Sum === p2Sum) {
+        $("#winnerMessage").text("Tie!  Re-roll");
+    } else {
+        $("#winnerMessage").text("Player one wins");
+    }
+};
+
+$("#winnerMessage").fadeIn(1500);
+
+// var resetButton = function() {
+//     $("body").on("click", )
 // };
-// compareSums(3, 500);
+
 
 
 
