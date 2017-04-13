@@ -36,7 +36,7 @@ function playerOneRollDice() {
     die3.innerText = d3;
     die4.innerText = d4;
     die5.innerText = d5;
-    $("#player1Sum").html("You rolled " + p1Sum + ".");
+    $("#player1Sum").html("Player one rolled " + p1Sum + ".");
     $("#playerTwoRollButton").show();
     $("#playerOneRollButton").hide();
 
@@ -64,26 +64,32 @@ function playerTwoRollDice() {
     die8.innerText = d8;
     die9.innerText = d9;
     die10.innerText = d10;
-    $("#player2Sum").html("You rolled " + p2Sum + ".");
+    $("#player2Sum").html("Player two rolled " + p2Sum + ".");
     $("#playerTwoRollButton").hide();
     compareSums();
 }
 
 var compareSums = function() {
+    $("#winnerMessage").hide()
     if (p1Sum > p2Sum) {
         $("#winnerMessage").text("Player two wins!");
     } else if (p1Sum === p2Sum) {
-        $("#winnerMessage").text("Tie!  Re-roll");
+        $("#winnerMessage").text("Tie!  Re-roll please.");
     } else {
         $("#winnerMessage").text("Player one wins");
     }
+    $("#winnerMessage").fadeIn(1500);
 };
 
-$("#winnerMessage").fadeIn(1500);
 
-// var resetButton = function() {
-//     $("body").on("click", )
+
+
+// var resetButton = document.getElementById("resetButton") {
+//     $("#resetButton").on("click").location.reload("body");
 // };
+
+
+
 
 
 

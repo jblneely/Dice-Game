@@ -8,3 +8,7 @@ div.dice {
     text-align: center;
     margin: 5px;
 }
+
+h2 {
+    clear: left;
+}
