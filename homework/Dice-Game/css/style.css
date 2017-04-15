@@ -1,14 +1,87 @@
-div.dice {
+html {
+    background: url("../images/DesertSky.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.dice {
     float: left;
-    width: 32px;
+    width: 100px;
+    height: 100px;
     background: grey;
-    border: red;
-    padding: 10px;
-    font-size: 24px;
-    text-align: center;
+    /*border: red;*/
+    /*padding: 10px;*/
+    /*font-size: 24px;*/
+    /*text-align: center;*/
     margin: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+    flex-wrap: wrap;
 }
 
 h2 {
     clear: left;
 }
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    border: 2px solid lightgrey;
+    width: 100%;
+}
+
+li {
+    border: solid 1px lightgrey;
+    font-size: 2rem;
+    height: 100px;
+    padding: 2rem;
+}
+
+.navicon {
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.audioicon {
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 0em;
+    right: 2em;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#sectionImage {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fafa-bars {
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*ullulation clip
+https://soundstudies.files.wordpress.com/2013/04/zaghareet-egypt.mp3*/

@@ -5,34 +5,59 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FiveDiceGame</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Dice</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="author" href="humans.txt">
+    <script src="https://use.fontawesome.com/66fcd2c0b8.js"></script>
+    <script src="https://use.fontawesome.com/4316c6ad1e.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dice.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- slick -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script> -->
 </head>
 
 <body>
-    <h1>FIVE DICE <br> DIVINITY DICE</h1>
+    <section id="sectionImage" class="imageCarousel">
+    </section>
+    <div id=mobile-nav>
+        <a class="navicon" id="menu" href=""><i class="fa fa-bars"></i></a>
+        <a class="navicon" id="windowclose" href=""><i class=class="fa fa-window-close"></i></a>
+        <a class="audioicon" id="play" href=""><i class="fa fa-play"></i></i></a>
+        <a class="audioicon" id="stop" href=""><i class="fa fa-stop"></i></i></a>
+        <ul>
+            <li id="fiveDiceGame">FIVE DICE GAME</li>
+            <li id="diviningDice">DIVINING DICE</li>
+            <li id="about">ABOUT</li>
+        </ul>
+    </div>
+    <div id="eightBall">8</div>
+    <h1>FIVE DICE<br>DIVINING DICE</h1>
     <div id="player1">
-        <div id="die1" class="dice">0</div>
-        <div id="die2" class="dice">0</div>
-        <div id="die3" class="dice">0</div>
-        <div id="die4" class="dice">0</div>
-        <div id="die5" class="dice">0</div>
+        <div id="die1" class="dice d1"></div>
+        <div id="die2" class="dice d1"></div>
+        <div id="die3" class="dice d1"></div>
+        <div id="die4" class="dice d1"></div>
+        <div id="die5" class="dice d1"></div>
         <button id="playerOneRollButton">Roll Dice</button>
         <h2 id="player1Sum" style="clear:left;"></h2>
+        <h2 id="player1OfAKind" style="clear:left;"></h2>
     </div>
     <div id="player2">
-        <div id="die6" class="dice">0</div>
-        <div id="die7" class="dice">0</div>
-        <div id="die8" class="dice">0</div>
-        <div id="die9" class="dice">0</div>
-        <div id="die10" class="dice">0</div>
+        <div id="die6" class="dice d1"></div>
+        <div id="die7" class="dice d1"></div>
+        <div id="die8" class="dice d1"></div>
+        <div id="die9" class="dice d1"></div>
+        <div id="die10" class="dice d1"></div>
         <button id="playerTwoRollButton">Roll Dice</button>
         <h2 id="player2Sum" style="clear:left;"></h2>
+        <h2 id="player2OfAKind" style="clear:left;"></h2>
     </div>
     <h1 id=winnerMessage></h1>
-    <button id="resetButton" input type='button' onclick='location.reload();' value='Refresh Page'>PLAY AGAIN</button>
+    <button id="resetButton" type='button' onclick='location.reload();' value='Refresh Page'>PLAY AGAIN</button>
     <script src="js/main.js"></script>
 </body>
 
