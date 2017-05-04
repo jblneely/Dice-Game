@@ -2,7 +2,8 @@ var express = require('express');
 var db = require('./../models');
 var router = express.Router();
 var moment = require('moment');
-// var bodyParser = require('body-parser');
+var async = require("async");
+var isLoggedIn = require('../middleware/isLoggedIn');
 
 
 
@@ -53,6 +54,17 @@ router.get('/:id', function(req, res) {
         res.status(500).render('error');
     });
 });
+router.get('/:id', function(req, res) {
+    db.fire.findById(req.params.id).then(function(fire) {
+        if (fire) {
+            res.render('show', { fire: fire });
+        } else {
+            res.status(404).render('error');
+        }
+    }).catch(function(err) {
+        res.status(500).render('error');
+    });
+});
 
 router.put('/:id', function(req, res) {
     console.log('------HERE: ', req.body);
@@ -95,13 +107,44 @@ router.delete('/:id', function(req, res) {
     });
 });
 //post /profile --create a new aim
-router.post('/', function(req, res) {
-    // console.log(req.body);
-    db.aim.create(req.body).then(function(aim) {
-        res.redirect('/profile');
+router.post('/', isLoggedIn, function(req, res) {
+    console.log("REQ.BODY IN POST /profile", req.body);
+    db.aim.create({
+        objective: req.body.objective,
+        userId: req.user.id
+    }).then(function(aim) {
+        //Get name/keyresult arrays into an array of objs
+        var combined = [];
+
+        for (var i = 0; i < req.body.name.length; i++) {
+            combined.push({ name: req.body.name[0], keyResult: req.body.keyResult[0] });
+        }
+
+        console.log("COMBINED:", combined);
+
+        async.forEachSeries(combined, function(c, callback) {
+            //function that runs for each thing
+            console.log("THING:", c);
+            db.fire.create({
+                'keyResult': c.name,
+                'score': parseInt(c.keyResult),
+                'aimId': aim.id
+            }).then(function(newFire) {
+                console.log("SUCCESS:");
+                callback();
+            });
+        }, function() {
+            console.log("ALL DONE:");
+            //Runs when everything is done
+            res.redirect("/profile");
+        });
+
+
+
     }).catch(function(err) {
-        res.status(500).render('error');
+        console.log("ERROR:", err);
+        res.send(err);
     });
 });
-
+// res.redirect('/profile');
 module.exports = router;
