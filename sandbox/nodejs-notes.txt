@@ -1,0 +1,16 @@
+websocket server - chat server
+fast file upload client
+ad server
+any real-time data apps.
+
+not a:
+webframework
+for beginers
+
+
+
+BLOCKING CODE:
+
+NON-BLOCKING CODE: (FASTER) (callback -- when you are complete, do something else)
+
+ 

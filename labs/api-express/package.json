@@ -1,0 +1,14 @@
+{
+  "name": "api-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm init",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
