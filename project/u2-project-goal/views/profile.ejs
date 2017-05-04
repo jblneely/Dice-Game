@@ -1,11 +1,13 @@
-<h1>Objectives + Key Results + target charts</h1>
+<h1>OBJECTIVES | KEY RESULTS </h1>
 
 
 
 
 <a href="/profile/new" class="btn btn-success pull-right">CREATE NEW TARGET</a>
 
-<h1>Targets</h1>
+<h1>TARGETS</h1>
+
+<h1>DOUGHNUT CHART HERE</h1>
 
 <a href="/">&larr; Home</a>
 
@@ -13,21 +15,21 @@
 
 
 <% aims.forEach(function(aim) { %>
-<div class="well">
-  <h2><a href="/profile/<%= aim.id %>"><%= aim.objective %></a>
-    <small><%= aim.objective %></small>
-  </h2>
+	<div class="well">
+	  <h2><a href="/profile/<%= aim.id %>"><%= aim.objective %></a>
+	    <small><%= aim.objective %></small>
+	  </h2>
 
-  <div class="radio">
-  <label><input type="radio" name="optradio">done - add one</label>
-</div>
-<div class="radio">
-  <label><input type="radio" name="optradio">not done - add none</label>
-</div>
+	  <div class="radio">
+	  <label><input type="radio" name="optradio">done - add one</label>
+	</div>
+	<div class="radio">
+	  <label><input type="radio" name="optradio">not done - add none</label>
+	</div>
 
-  <a href="/profile/<%= aim.id %>/edit" class="btn btn-info glyphicon glyphicon-edit"></a>
+	  <a href="/profile/<%= aim.id %>/edit" class="btn btn-info glyphicon glyphicon-edit"></a>
 
-  <a href="/profile/<%= aim.id %>" class="btn btn-danger glyphicon glyphicon-trash delete-btn"></a>
+	  <a href="/profile/<%= aim.id %>" class="btn btn-danger glyphicon glyphicon-trash delete-btn"></a>
 
-</div>
+	</div>
 <% }); %>

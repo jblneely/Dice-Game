@@ -38,14 +38,11 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
-// app.get('/profile', isLoggedIn, function(req, res) {
-//     res.render('profile');
-// });
 
 
 //Controllers
 app.use('/auth', require('./controllers/auth'));
-app.use('/profile', require('./controllers/profile'));
+app.use('/profile', isLoggedIn, require('./controllers/profile'));
 
 
 //Listen
