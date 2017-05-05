@@ -42,14 +42,66 @@ router.get('/:id/edit', function(req, res) {
         res.status(500).render('error');
     });
 });
-//GET
+//GET FIRES
+router.get('/fire/new/:aimId', function(req, res) {
+    res.render('newFire', {
+        aimId: req.params.aimId
+    });
+
+
+
+});
+router.post('/fire/new', function(req, res) {
+    console.log(req.body);
+    db.aim.findById(req.body.aimId)
+        .then(function(aim) {
+            aim.createFire({
+                keyResult: req.body.keyResult,
+                goal: req.body.goal,
+            }).then(function(post) {
+                res.redirect('/profile');
+            });
+        });
+});
+//findall fires where aimId is the aim id you are looking for and post them to /profile
+
 router.get('/:id', function(req, res) {
-    db.aim.findById(req.params.id).then(function(aim) {
-        if (aim) {
-            res.render('show', { aim: aim });
-        } else {
-            res.status(404).render('error');
-        }
+    db.user.find({
+        where: { id: req.user.id },
+        include: [db.aim]
+    }).then(function(user) {
+
+
+        // async.forEachSeries(user.aims, function(c, callback) {
+        //     //function that runs for each thing
+        //     console.log("THING:", c);
+        //     db.fire.find({
+        //         where: { aimId: c.id }
+        //     }).then(function(fire) {
+        //         console.log(fire.keyResult);
+        //         callback();
+        //     });
+        // }, function(data) {
+        //     console.log("ALL DONE:", data);
+        //     //Runs when everything is done
+        //     res.redirect("/profile");
+        // });
+
+
+
+
+
+        // aims.getFires({
+        //         include: [db.fire]
+        //     }).then(function(fires) {
+        //         console.log(fires)
+        //         res.send('f');
+        //     })
+        // if (aim) {
+        //     res.render('show', { aim: aim });
+        // } else {
+        //     res.status(404).render('error');
+        // }
     }).catch(function(err) {
         res.status(500).render('error');
     });
@@ -65,6 +117,7 @@ router.get('/:id', function(req, res) {
         res.status(500).render('error');
     });
 });
+
 
 router.put('/:id', function(req, res) {
     console.log('------HERE: ', req.body);
@@ -116,30 +169,30 @@ router.post('/', isLoggedIn, function(req, res) {
         //Get name/keyresult arrays into an array of objs
         var combined = [];
 
-        for (var i = 0; i < req.body.name.length; i++) {
-            combined.push({ name: req.body.name[0], keyResult: req.body.keyResult[0] });
-        }
+        // for (var i = 0; i < req.body.objective.length; i++) {
+        //     combined.push({ objective: req.body.objective[0], keyResult: req.body.keyResult[0] });
+        // }
 
-        console.log("COMBINED:", combined);
+        // console.log("COMBINED:", combined);
 
-        async.forEachSeries(combined, function(c, callback) {
-            //function that runs for each thing
-            console.log("THING:", c);
-            db.fire.create({
-                'keyResult': c.name,
-                'score': parseInt(c.keyResult),
-                'aimId': aim.id
-            }).then(function(newFire) {
-                console.log("SUCCESS:");
-                callback();
-            });
-        }, function() {
-            console.log("ALL DONE:");
-            //Runs when everything is done
-            res.redirect("/profile");
-        });
+        // async.forEachSeries(combined, function(c, callback) {
+        //     //function that runs for each thing
+        //     console.log("THING:", c);
+        //     db.fire.create({
+        //         'keyResult': c.name,
+        //         'score': parseInt(c.keyResult),
+        //         'aimId': aim.id
+        //     }).then(function(newFire) {
+        //         console.log("SUCCESS:");
+        //         callback();
+        //     });
+        // }, function() {
+        //     console.log("ALL DONE:");
+        //     //Runs when everything is done
+        //     res.redirect("/profile");
+        // });
 
-
+        res.redirect('/profile');
 
     }).catch(function(err) {
         console.log("ERROR:", err);
